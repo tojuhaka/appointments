@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: Massage
+  start: 2013-10-30 19:41:07
+  end: 2013-10-30 21:41:07
+  description: Legs and shoulders
+
+two:
+  title: Handicap training
+  start: 2013-09-30 17:41:07
+  end: 2013-09-30 19:41:07
+  description: walking
