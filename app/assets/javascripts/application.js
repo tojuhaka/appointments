@@ -16,9 +16,10 @@
 //= require  ./bower_components/jquery-ui/ui/jquery.ui.mouse.js
 //= require  ./bower_components/jquery-ui/ui/jquery.ui.draggable.js
 //= require  ./bower_components/jquery-ui/ui/jquery.ui.droppable.js
-//= require  ./bower_components/angular/angular.js
-//= require  ./bower_components/angular-resource/angular-resource.js
-//= require  ./bower_components/angular-resource/angular-resource.js
+//= require  angular
+//= require  angular-resource
+//= require  angular-ui
+//= require  angular-ui-bootstrap-tpls
 //= require  ./bower_components/fullcalendar/fullcalendar.js
 //= require  ./bower_components/fullcalendar/gcal.js
 //= require  ./components/calendar.js

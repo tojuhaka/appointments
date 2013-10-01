@@ -1,11 +1,55 @@
-<div class="container">
-  <div ng-controller="CalendarCtrl">
-    <label> Name: </label>
-    <h1> Hello {{message}}</h1>
+<div class="container" ng-app="Calendar">
 
-    <div class="well">
-      <div ui-calendar="uiConfig.calendar" ng-model="eventSources">
+<script type="text/ng-template" id="myModalContent.html">
+
+    <div class="modal-header">
+        <h3>I'm a modal!</h3>
     </div>
+
+    <div class="modal-body">
+        <form name="myForm" ng-controller="FormCtrl">
+            <fieldset>
+                <label>Title</label>
+                <input name="title" ng-model="appointment.title" required>
+                <span class="error" ng-show="myForm.title.$error.required">Required!</span><br>
+
+                <label>Description</label>
+                <input name="description" ng-model="appointment.description" required>
+                <span class="error" ng-show="myForm.description.$error.required">Required!</span><br>
+            </fieldset>
+            <button class="btn btn-primary" ng-click="ok(appointment)">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+         </form>
+    </div>
+</script>
+
+
+<div ng-controller="ModalDemoCtrl">
+    <button class="btn" ng-click="open()">Open me!</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div>
+
+
+  <div ng-controller="CalendarCtrl">
+    
+    <div class="row">
+
+      <div class="span4">
+      asdf
+      </div>
+    
+      <button id="open"> Modal </button>
+      <div class="span8">
+        <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+          <h2>{{alertMessage}}</h2>
+        </div> 
+        <div class="well">
+          <div ui-calendar="uiConfig.calendar" ng-model="eventSources">
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </div>
 

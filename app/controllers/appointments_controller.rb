@@ -8,7 +8,8 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointment = Appointment.new(test_params)
+    @appointment = Appointment.new(params[:appointment])
+    logger.info params
 
     respond_to do |format|
       if @appointment.save

@@ -6,6 +6,7 @@ Appointments::Application.routes.draw do
   scope :api do
     get "/appointments(.:format)" => "appointments#index"
     get "/appointments/:id(.:format)" => "appointments#show"
+    post "/appointments/" => "appointments#create"
   end
   root to: "home#index"
 

@@ -1,10 +1,15 @@
-App = angular.module('Calendar', ['ui.calendar', 'ngResource']);
-
 App.controller('CalendarCtrl', function ($scope) {
     /* Change View */
     $scope.changeView = function(view,calendar) {
       calendar.fullCalendar('changeView',view);
     };
+
+    $scope.alertEventOnClick = function( date, allDay, jsEvent, view ){
+        $scope.$apply(function(){
+          $scope.alertMessage = ('Day Clicked ' + date);
+        });
+    };
+
     /* config object */
     $scope.uiConfig = {
       calendar:{
